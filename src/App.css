@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Card Design */
+
+.create-post .card{
+  border: none;
+}
+
+.create-post .card-footer{
+  border-top: 1px solid rgba(115,115,132,.125);
+}
+.media-list {
+  padding-left: 0;
+  list-style: none;
+}
+.media:first-child {
+  margin-top: 0;
+}
+.media, .media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.media-left, .media>.pull-left {
+  padding-right: 10px;
+}
+
+.pull-left {
+  float: left !important;
+}.media-left, .media-right, .media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+.media-body {
+  width: 10000px;
+}
+.media, .media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.text-primary-custom{
+  color: #5386f2;
+}
+.text-secondary-light{
+  color: #afb0b8;
+}
+.show-post .card-footer{
+  background-color: #f7f7f7 !important;
+}
+.create-post .card{
+  border-radius: 10px;
+}
+.create-post .card-footer:last-child{
+  border-radius: 5px;
+}
+.create-post textarea.form-control{
+  min-height: calc(4.5em + .75rem + 2px);
+}
+.create-post input[type="file"]{
+  position: absolute;
+  font-size: 50px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+div {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-btn.btn{
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: 2.25rem;
+  cursor: pointer;
+}
+.btn-primary-custom {
+  background-color: #8fb1f7 !important;
+  border-color: #8fb1f7 !important;
+}
+.like-btn{
+  cursor: pointer;
+}
+.btn-check:active+.btn-light:focus, .btn-check:checked+.btn-light:focus, .btn-light.active:focus, .btn-light:active:focus, .show>.btn-light.dropdown-toggle:focus {
+  box-shadow: none !important;
+}
+.btn-check:focus+.btn-light, .btn-light:focus{
+  box-shadow: none !important;
+}
+.form-control.comment{
+  border-radius: 50px;
+}
