@@ -32,8 +32,8 @@ ToggleComment = () => {
                 </div>
                 <div className="card-footer text-secondary">
                         {/* <span className="me-2 like-btn" ><i class="bi bi-heart-fill"></i> Like</span> */}
-                        <button type="button" onClick={this.ToggleLike} class="btn btn-light btn-info text-secondary"> <span class="btn-label"><i class="bi bi-heart-fill me-1"></i></span>Like</button>
-                        <button type="button" onClick={this.ToggleComment} class="btn btn-light btn-info text-secondary"> <span class="btn-label"><i class="bi bi-pencil-square me-1"></i></span>Comment</button>
+                        <button type="button" onClick={this.ToggleLike} className="btn btn-light btn-info text-secondary"> <span className="btn-label"><i className="bi bi-heart-fill me-1"></i></span>Like</button>
+                        <button type="button" onClick={this.ToggleComment} className="btn btn-light btn-info text-secondary"> <span className="btn-label"><i className="bi bi-pencil-square me-1"></i></span>Comment</button>
 
                         { this.state.comments ? <Comment /> : '' }
 

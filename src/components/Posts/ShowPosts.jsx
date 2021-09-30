@@ -25,7 +25,7 @@ class ShowPost extends Component {
         this.setState({
           posts: response.data
         });
-        // console.log(response.data);
+        console.log(response.data);
       })
       .catch(e => {
         console.log(e);
@@ -35,12 +35,12 @@ class ShowPost extends Component {
   render(){
 
   const posts = this.state.posts
-  // console.log("the posts data is", posts)
+  console.log("Post", posts);
   return (
       <div className="show-posts">
                    
         {posts.map((post) => (
-        <div className="col-md-12 d-flex justify-content-center text-start">
+        <div key={post._id} className="col-md-12 d-flex justify-content-center text-start">
 
             <div className="card border-success mt-5" style={{width:"500px"}}>
               <div className="media-list">
@@ -48,7 +48,7 @@ class ShowPost extends Component {
                   <a href="index.html" className="pull-left"><img src="http://designbootstrap.com/livedemos/2015/03/05/twitter-feed/assets/img/1.png" alt="logo" className="img-circle" /></a>
                   <div className="media-body">
                     <strong className="text-secondary">Patrick Shuff</strong>
-                    <p className="fw-bold text-primary-custom mb-0"><i class="bi bi-geo-alt-fill me-1"></i>OH, USA</p>
+                    <p className="fw-bold text-primary-custom mb-0"><i className="bi bi-geo-alt-fill me-1"></i>OH, USA</p>
                     <span className="text-secondary"><small>1 minute ago</small></span>
                   </div>
                 </div>

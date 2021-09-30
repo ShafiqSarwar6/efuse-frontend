@@ -6,27 +6,26 @@ class Comment extends Component {
     super(props);
     this.state = {
       term: '',
-      items: []
+      comments: []
     };
   }
 
   onChange = (event) => {
     this.setState({ term: event.target.value });
-    console.log("comment value is", event.target.value);
   }
 
   onSubmit = (event) => {
     event.preventDefault();
     this.setState({
       term: '',
-      items: [...this.state.items, this.state.term]
+      comments: [...this.state.comments, this.state.term]
     });
   }
 
   render(){
     return (
       <div className="comments">
-        <CommentData comment={this.state.items} />        
+        <CommentData comment={this.state.comments} />        
         <div className="media pt-2 pb-3">
           <a href="index.html" className="pull-left"><img src="http://designbootstrap.com/livedemos/2015/03/05/twitter-feed/assets/img/1.png" width="40px" alt="logo" className="img-circle" /></a>
           <div className="media-body">

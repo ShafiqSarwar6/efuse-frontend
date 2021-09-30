@@ -15,7 +15,7 @@ class UsersPosts {
     }
 
     getPosts(){
-        return http.get("/user/6155b7fee588bea77be618b7/posts");
+        return http.get("/user/6155eca96b0967342a630f66/posts");
     }
 
     update(id, data) {
