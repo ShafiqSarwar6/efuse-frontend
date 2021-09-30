@@ -130,3 +130,10 @@ div {
 .form-control.comment{
   border-radius: 50px;
 }
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #e2e2e2 !important;
+  outline: 0;
+  box-shadow: none !important;
+}

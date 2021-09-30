@@ -1,17 +1,46 @@
 import { Component } from 'react';
 import '../../App.css';
 import ActionButtons from './ActionButtons'
-
+import UsersPosts from "../../services/post.service";
 
 class ShowPost extends Component {
+
+  constructor(props) {
+    super(props);
+    this.retrievePosts = this.retrievePosts.bind(this);
+
+    this.state = {
+      posts: [],
+      currentPost: null,
+    };
+  }
+
+  componentDidMount() {
+    this.retrievePosts();
+  }
+
+  retrievePosts() {
+    UsersPosts.getPosts()
+      .then(response => {
+        this.setState({
+          posts: response.data
+        });
+        // console.log(response.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
+
   render(){
 
-  const posts = this.props.posts
+  const posts = this.state.posts
+  // console.log("the posts data is", posts)
   return (
       <div className="show-posts">
                    
-        {posts.map((name, index) => (
-        <div key={index} className="col-md-12 d-flex justify-content-center text-start">
+        {posts.map((post) => (
+        <div className="col-md-12 d-flex justify-content-center text-start">
 
             <div className="card border-success mt-5" style={{width:"500px"}}>
               <div className="media-list">
@@ -24,7 +53,7 @@ class ShowPost extends Component {
                   </div>
                 </div>
                 <div className="post-content px-3 text-secondary fst-normal">
-                    <p>{name}</p>
+                    <p>{post.content}</p>
                 </div>
               </div>
             <ActionButtons />
